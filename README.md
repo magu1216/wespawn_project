@@ -1,2 +1,2 @@
-# onespawn_app
+# wespawn_app
 social network for gamers || Digitales Gesellenstück
