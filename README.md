@@ -1,2 +1,2 @@
-# wespawn_app
-social network for gamers || Digitales Gesellenstück
+# weSPAWN
+social network app for gamers || Digitales Gesellenstück
