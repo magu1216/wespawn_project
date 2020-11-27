@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import QuickButton from "./QuickButton";
 
 export default function AppFooter() {
   return (
     <Footer>
-      <button>UPLOAD</button>
-      <div>STATUS</div>
-      <div>FRIENDS</div>
+      <QuickButton direction={"upload"} />
+      <QuickButton direction={"lfg"} />
+      <QuickButton direction={"friends"} />
     </Footer>
   );
 }
