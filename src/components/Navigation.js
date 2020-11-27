@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-//import { Link } from "react-router-dom";
 import styled from "styled-components";
 import BurgerButton from "./BurgerButton";
 
@@ -8,7 +7,6 @@ export default function Navigation() {
 
   //toogle dropdown
   const showDropdown = () => setDropdown(!dropdown);
-  console.log(dropdown);
 
   return (
     <div>
