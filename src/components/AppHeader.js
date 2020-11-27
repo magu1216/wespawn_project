@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Navigation from "./Navigation";
 
-export default function Header() {
+export default function AppHeader() {
   return (
     <Header>
       <h2>weSPAWN</h2>

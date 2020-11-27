@@ -1,19 +1,15 @@
 import React from "react";
 
 import GlobalStyle from "./theme/globalStyles.js";
-import Header from "./components/Header";
+import AppHeader from "./components/AppHeader";
+import AppFooter from "./components/AppFooter";
 
 function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <Header />
-      <div></div>
-      <nav>
-        <div>UPLOAD</div>
-        <div>STATUS</div>
-        <div></div>
-      </nav>
+      <AppHeader />
+      <AppFooter />
     </div>
   );
 }
