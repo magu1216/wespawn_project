@@ -28,23 +28,27 @@ export default function AppFooter() {
 
   return (
     <Footer>
-      {uploadMenu && <QuickMenu direction={"upload"} color={"#F20039"} />}
+      {uploadMenu && (
+        <QuickMenu direction={"upload"} color={"var(--upload-red)"} />
+      )}
       <QuickButton
-        color={"#F20039"}
+        color={"var(--upload-red)"}
         direction={"upload"}
         onClick={toggleUploadMenu}
         isActive={uploadMenu}
       />
-      {lfgMenu && <QuickMenu direction={"lfg"} color={"#1BB5AB"} />}
+      {lfgMenu && <QuickMenu direction={"lfg"} color={"var(--lfg-cyan)"} />}
       <QuickButton
-        color={"#1BB5AB"}
+        color={"var(--lfg-cyan)"}
         direction={"lfg"}
         onClick={toggleLfgMenu}
         isActive={lfgMenu}
       />
-      {friendsMenu && <QuickMenu direction={"friends"} color={"#446DFD"} />}
+      {friendsMenu && (
+        <QuickMenu direction={"friends"} color={"var(--friendlist-blue)"} />
+      )}
       <QuickButton
-        color={"#446DFD"}
+        color={"var(--friendlist-blue)"}
         direction={"friends"}
         onClick={toggleFriendsMenu}
         isActive={friendsMenu}

@@ -8,6 +8,12 @@ const GlobalStyle = createGlobalStyle`
         padding: 0px;
     }
 
+    :root {
+        --upload-red: #F20039;
+        --lfg-cyan: #1BB5AB;
+        --friendlist-blue: #446DFD;
+    }
+
     body {
         background-color: #404040;
         font-family: 'Roboto', sans-serif;
