@@ -9,6 +9,10 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <AppHeader />
+      <div>Picture</div>
+      <div>Username + Info</div>
+      <div>Platforms</div>
+      <div>Uploads</div>
       <AppFooter />
     </div>
   );
