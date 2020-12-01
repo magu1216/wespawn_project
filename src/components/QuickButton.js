@@ -48,12 +48,13 @@ const Button = styled.div`
   border-radius: 50%;
   box-shadow: ${(props) =>
     props.isActive
-      ? "inset 4px 4px 5px #404040, inset -4px -4px 6px lightgrey"
+      ? "inset 4px 4px 5px var(--secondary-gray), inset -4px -4px 6px var(--shadow-gray)"
       : "inset 0 0 4px black"};
 
   svg {
     height: 35px;
     width: 35px;
-    color: ${(props) => (props.isActive ? props.color : "#8C8C8C")};
+    color: ${(props) =>
+      props.isActive ? props.color : "var(--inactivebutton-gray)"};
   }
 `;

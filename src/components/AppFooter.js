@@ -28,28 +28,26 @@ export default function AppFooter() {
 
   return (
     <Footer>
-      {uploadMenu && (
-        <QuickMenu direction={"upload"} color={"var(--upload-red)"} />
-      )}
+      {uploadMenu && <QuickMenu direction="upload" color="var(--upload-red)" />}
       <QuickButton
-        color={"var(--upload-red)"}
-        direction={"upload"}
+        color="var(--upload-red)"
+        direction="upload"
         onClick={toggleUploadMenu}
         isActive={uploadMenu}
       />
-      {lfgMenu && <QuickMenu direction={"lfg"} color={"var(--lfg-cyan)"} />}
+      {lfgMenu && <QuickMenu direction="lfg" color="var(--lfg-cyan)" />}
       <QuickButton
-        color={"var(--lfg-cyan)"}
-        direction={"lfg"}
+        color="var(--lfg-cyan)"
+        direction="lfg"
         onClick={toggleLfgMenu}
         isActive={lfgMenu}
       />
       {friendsMenu && (
-        <QuickMenu direction={"friends"} color={"var(--friendlist-blue)"} />
+        <QuickMenu direction="friends" color="var(--friendlist-blue)" />
       )}
       <QuickButton
-        color={"var(--friendlist-blue)"}
-        direction={"friends"}
+        color="var(--friendlist-blue)"
+        direction="friends"
         onClick={toggleFriendsMenu}
         isActive={friendsMenu}
       />
@@ -58,7 +56,7 @@ export default function AppFooter() {
 }
 
 const Footer = styled.footer`
-  background-color: #f2f2f2;
+  background-color: var(--primary-gray);
   display: flex;
   justify-content: space-between;
   align-items: center;
