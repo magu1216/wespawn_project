@@ -30,8 +30,8 @@ const StyledNavigation = styled.nav`
   background-color: crimson;
   display: flex;
   justify-content: center;
-  height: 50vh;
-  width: 60vw;
+  height: 30vh;
+  width: 50vw;
   position: absolute;
   top: 80px;
   right: 0;

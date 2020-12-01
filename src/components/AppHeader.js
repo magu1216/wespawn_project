@@ -13,12 +13,12 @@ export default function AppHeader() {
 }
 
 const Header = styled.header`
-  background-color: #e5e5e5;
+  background-color: #f2f2f2;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  border-bottom: solid black 1px;
+  box-shadow: inset 0 -4px 4px -4px black;
   position: relative;
 
   h1,
