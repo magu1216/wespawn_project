@@ -4,9 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "cd client && npm run build",
+    "client": "cd client && npm start",
+    "postinstall": "cd client && npm install && cd ../server && npm install",
+    "server": "nodemon server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Markus Guertner",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.6"
+  }
 }

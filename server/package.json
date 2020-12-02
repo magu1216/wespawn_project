@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node server.js",
+    "dev": "nodemon --exec babel-node server.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -19,5 +20,6 @@
     "@babel/node": "^7.12.6",
     "@babel/preset-env": "^7.12.7",
     "nodemon": "^2.0.6"
-  }
+  },
+  "type": "module"
 }
