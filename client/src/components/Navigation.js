@@ -33,7 +33,7 @@ const StyledNavigation = styled.nav`
   height: 30vh;
   width: 50vw;
   position: absolute;
-  top: 80px;
+  top: 60px;
   right: 0;
 
   ul {

@@ -5,7 +5,7 @@ import Navigation from "./Navigation";
 export default function AppHeader() {
   return (
     <Header>
-      <h2>weSPAWN</h2>
+      <h2>vSPAWN</h2>
       <h1>Profile</h1>
       <Navigation />
     </Header>
@@ -17,9 +17,10 @@ const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 60px;
+  width: 100vw;
   box-shadow: inset 0 -4px 4px -4px black;
-  position: relative;
+  position: fixed;
 
   h1,
   h2 {

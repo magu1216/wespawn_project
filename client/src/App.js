@@ -3,16 +3,18 @@ import React from "react";
 import GlobalStyle from "./theme/globalStyles.js";
 import AppHeader from "./components/AppHeader";
 import AppFooter from "./components/AppFooter";
+import ProfileHead from "./components/ProfileHead.js";
+import ProfilePlatforms from "./components/ProfilePlatforms.js";
+import ProfileUploads from "./components/ProfileUploads.js";
 
 function App() {
   return (
     <div className="App">
       <GlobalStyle />
       <AppHeader />
-      <div>Picture</div>
-      <div>Username + Info</div>
-      <div>Platforms</div>
-      <div>Uploads</div>
+      <ProfileHead />
+      <ProfilePlatforms />
+      <ProfileUploads />
       <AppFooter />
     </div>
   );
