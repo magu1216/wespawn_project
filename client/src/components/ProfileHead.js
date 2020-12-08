@@ -13,7 +13,7 @@ export default function ProfileHead() {
   );
 }
 
-const Body = styled.section`
+const Head = styled.section`
   display: grid;
   padding: 10px;
   grid-template-columns: 1fr 1fr;

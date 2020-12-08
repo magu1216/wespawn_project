@@ -3,14 +3,16 @@ import React from "react";
 import GlobalStyle from "./theme/globalStyles.js";
 import AppHeader from "./components/AppHeader";
 import AppFooter from "./components/AppFooter";
-import ProfileBody from "./components/ProfileBody.js";
+import ProfileHead from "./components/ProfileHead.js";
+import ProfilePlatforms from "./components/ProfilePlatforms.js";
 
 function App() {
   return (
     <div className="App">
       <GlobalStyle />
       <AppHeader />
-      <ProfileBody />
+      <ProfileHead />
+      <ProfilePlatforms />
       <AppFooter />
     </div>
   );

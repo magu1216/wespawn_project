@@ -9,9 +9,7 @@ const StyledBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 150px;
-  height: 25px;
-  margin: 5px;
+  padding: 3px 5px;
   font-size: 20px;
   border-radius: 10px;
   background-color: ${(props) => props.color};
