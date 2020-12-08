@@ -15,7 +15,7 @@ export default function ProfileHead() {
 
 const Head = styled.section`
   display: grid;
-  padding: 10px;
+  padding: 65px 10px 10px 10px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-gap: 10px;

@@ -33,6 +33,7 @@ export default function QuickMenu(props) {
 }
 
 const QuickBox = styled.div`
+  z-index: -1;
   background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
@@ -41,7 +42,6 @@ const QuickBox = styled.div`
   width: 100%;
   position: absolute;
   bottom: 35px;
-  z-index: -1;
   border-radius: 35px 35px 0 0;
 `;
 

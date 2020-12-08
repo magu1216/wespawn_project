@@ -5,6 +5,7 @@ import AppHeader from "./components/AppHeader";
 import AppFooter from "./components/AppFooter";
 import ProfileHead from "./components/ProfileHead.js";
 import ProfilePlatforms from "./components/ProfilePlatforms.js";
+import ProfileUploads from "./components/ProfileUploads.js";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <AppHeader />
       <ProfileHead />
       <ProfilePlatforms />
+      <ProfileUploads />
       <AppFooter />
     </div>
   );

@@ -23,10 +23,8 @@ export default function ProfilePlatforms() {
 const Platforms = styled.section`
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
   padding: 10px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-gap: 10px;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
 `;

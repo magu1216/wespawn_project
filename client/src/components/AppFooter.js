@@ -66,7 +66,7 @@ const Footer = styled.footer`
   width: 80vw;
   box-shadow: inset 0 0 4px black;
   border-radius: 35px;
-  position: absolute;
+  position: fixed;
   bottom: 10px;
 
   h1,
