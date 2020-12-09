@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import StatusList from "../services/StatusList";
 
 export default function QuickMenu(props) {
   if (props.direction === "upload") {
@@ -16,8 +17,7 @@ export default function QuickMenu(props) {
       <QuickBox>
         <IndicatorBox color={props.color} />
         <h3>Set Status</h3>
-        <div>Gallery</div>
-        <div>Camera</div>
+        <StatusList />
       </QuickBox>
     );
   } else {
