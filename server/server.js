@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import connectDB from "./Services/connectAtlas.js";
+import Status from "./Models/Status.js";
 
 //---------------running the database-----------------
 connectDB();
@@ -17,9 +18,22 @@ server.listen(port, () => {
   console.log(`server is open at: http://localhost:${port}`);
 });
 
-//GET request, "/" is the route, responds the status
+//-----------ROUTES-------------
 server.get("/", (req, res) => {
   res.json({
-    status: "this works",
+    status: "Welcome",
   });
+});
+
+server.get("/status", (req, res) => {
+  Status.find()
+    .then((status) => res.json(status))
+    .catch((error) => console.log(error));
+});
+
+server.post("/status", (req, res) => {
+  const newStatus = req.body;
+  Status.create(newStatus)
+    .then((data) => res.json(data))
+    .catch((error) => console.log(error));
 });

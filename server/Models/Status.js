@@ -1,9 +1,8 @@
 import mongoose from "mongoose";
 
 const statusSchema = new mongoose.Schema({
-  platform: String,
-  color: String,
-  active: Boolean,
+  platform: { type: String, required: true },
+  color: { type: String, required: true },
 });
 
 export default mongoose.model("Status", statusSchema);
