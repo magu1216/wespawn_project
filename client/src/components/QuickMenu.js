@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import StatusList from "../services/StatusList";
+import StatusList from "./StatusList";
 
 export default function QuickMenu(props) {
   if (props.direction === "upload") {
