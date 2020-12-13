@@ -16,7 +16,7 @@ export default function QuickMenu(props) {
     return (
       <QuickBox>
         <IndicatorBox color={props.color} />
-        <h3>Set Status</h3>
+        <h3>Select Status</h3>
         <StatusList />
       </QuickBox>
     );
