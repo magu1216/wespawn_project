@@ -3,9 +3,8 @@ import styled from "styled-components";
 import getPlatformList from "../services/getPlatformList.js";
 import IndicatorDot from "./IndicatorDot.js";
 
-export default function StatusList() {
+export default function StatusList({ activePlatform, onChangeActivePlatform }) {
   const [platforms, setPlatforms] = useState([]);
-  const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
     async function doGet() {
@@ -15,22 +14,25 @@ export default function StatusList() {
     doGet();
   }, []);
 
-  function toggleStatus() {
-    setIsActive(!isActive);
+  function switchStatus(status) {
+    onChangeActivePlatform(status);
   }
 
   return (
     <>
-      {/* status.length = Sicherheitsabfrage um kein leeres array zu mappen */}
+      {/* platforms.length = Sicherheitsabfrage um kein leeres array zu mappen */}
       {platforms.length > 0 &&
         platforms.map((status) => (
           <StatusBox
-            onClick={toggleStatus}
+            onClick={() => switchStatus(status)}
             key={status.id}
             color={status.color}
-            isActive={isActive}
+            isActive={status.id === activePlatform.id}
           >
-            <IndicatorDot color={status.color} isActive={isActive} />
+            <IndicatorDot
+              color={status.color}
+              isActive={status.id === activePlatform.id}
+            />
             {status.name} {status.version}
           </StatusBox>
         ))}
@@ -48,5 +50,6 @@ const StatusBox = styled.div`
   font-size: 20px;
   text-shadow: ${(props) =>
     props.isActive ? `1px 1px 2px ${props.color}` : null};
-  border: 1px solid ${(props) => props.color};
+  border: ${(props) =>
+    props.isActive ? `1px solid ${props.color}` : undefined};
 `;

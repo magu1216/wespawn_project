@@ -8,7 +8,6 @@ export default function IndicatorDot(props) {
       top={props.top}
       left={props.left}
       color={props.color}
-      isActive={props.isActive}
     />
   );
 }
@@ -22,6 +21,6 @@ const Indicator = styled.div`
   border-radius: 50%;
   border: 0.5px solid black;
   //background will fit to status color
-  background-color: ${(props) => (props.isActive ? `${props.color}` : "white")};
+  background-color: ${(props) => props.color || "white"};
   box-shadow: inset 0 0 4px black;
 `;

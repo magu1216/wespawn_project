@@ -17,7 +17,10 @@ export default function QuickMenu(props) {
       <QuickBox>
         <IndicatorBox color={props.color} />
         <h3>Select Status</h3>
-        <StatusList />
+        <StatusList
+          activePlatform={props.activePlatform}
+          onChangeActivePlatform={props.onChangeActivePlatform}
+        />
       </QuickBox>
     );
   } else {

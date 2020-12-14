@@ -10,7 +10,12 @@ export default function UserImg(props) {
           src="https://schmusa.de/wp-content/uploads/2020/06/Bud-Spencer2.jpg"
           alt="userphoto"
         />
-        <IndicatorDot position="absolute" top="4px" left="4px" />
+        <IndicatorDot
+          color={props.activePlatform.color}
+          position="absolute"
+          top="4px"
+          left="4px"
+        />
       </Avatar>
     </>
   );

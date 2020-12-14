@@ -5,7 +5,7 @@ import Navigation from "./Navigation";
 export default function AppHeader() {
   return (
     <Header>
-      <h2>vSPAWN</h2>
+      <h2>vS</h2>
       <h1>Profile</h1>
       <Navigation />
     </Header>
