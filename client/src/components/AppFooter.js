@@ -3,7 +3,11 @@ import styled from "styled-components";
 import QuickButton from "./QuickButton";
 import QuickMenu from "./QuickMenu";
 
-export default function AppFooter() {
+export default function AppFooter({
+  activePlatform,
+  onChangeActivePlatform,
+  platforms,
+}) {
   const [uploadMenu, setUploadMenu] = useState(false);
   const [lfgMenu, setLfgMenu] = useState(false);
   const [friendsMenu, setFriendsMenu] = useState(false);
@@ -35,7 +39,15 @@ export default function AppFooter() {
         onClick={toggleUploadMenu}
         isActive={uploadMenu}
       />
-      {lfgMenu && <QuickMenu direction="lfg" color="var(--lfg-cyan)" />}
+      {lfgMenu && (
+        <QuickMenu
+          direction="lfg"
+          color="var(--lfg-cyan)"
+          activePlatform={activePlatform}
+          onChangeActivePlatform={onChangeActivePlatform}
+          platforms={platforms}
+        />
+      )}
       <QuickButton
         color="var(--lfg-cyan)"
         direction="lfg"

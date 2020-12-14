@@ -1,20 +1,19 @@
-import React from "react";
 import styled from "styled-components";
 import TextBox from "./TextBox";
 
-export default function ProfilePlatforms() {
+export default function ProfilePlatforms({ platforms }) {
   return (
     <>
       <h3>Platforms / Clients</h3>
       <Platforms>
-        <TextBox color="white" text="Username" />
-        <TextBox color="green" text="XBox" />
-        <TextBox color="red" text="Username" />
-        <TextBox color="purple" text="XBox" />
-        <TextBox color="yellow" text="Username" />
-        <TextBox color="salmon" text="XBox" />
-        <TextBox color="orange" text="Username" />
-        <TextBox color="hotpink" text="XBox" />
+        {platforms.length > 0 &&
+          platforms.map((platform) => (
+            <TextBox
+              key={platform.id}
+              bordercolor={platform.color}
+              text={platform.name + " " + platform.version}
+            />
+          ))}
       </Platforms>
     </>
   );

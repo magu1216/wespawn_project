@@ -5,7 +5,7 @@ import Navigation from "./Navigation";
 export default function AppHeader() {
   return (
     <Header>
-      <h2>vSPAWN</h2>
+      <h2>vS</h2>
       <h1>Profile</h1>
       <Navigation />
     </Header>
@@ -13,7 +13,7 @@ export default function AppHeader() {
 }
 
 const Header = styled.header`
-  background-color: #f2f2f2;
+  background-color: var(--primary-gray);
   display: flex;
   justify-content: space-between;
   align-items: center;

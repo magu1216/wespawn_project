@@ -3,12 +3,24 @@ import styled from "styled-components";
 import TextBox from "./TextBox";
 import UserImg from "./UserImg";
 
-export default function ProfileHead() {
+export default function ProfileHead({ activePlatform }) {
   return (
     <Head>
-      <UserImg gridRow="1 / 3" gridColumn="1 / 2" />
-      <TextBox color="var(--primary-gray)" text="Username" />
-      <TextBox color="green" text="XBox" />
+      <UserImg
+        activePlatform={activePlatform}
+        gridRow="1 / 3"
+        gridColumn="1 / 2"
+      />
+      <TextBox color="var(--primary-gray)" text="Bud Spencer" />
+      <TextBox
+        color={activePlatform.color}
+        text={
+          activePlatform.name
+            ? activePlatform.name + " " + activePlatform.version
+            : "offline"
+        }
+        activePlatform={activePlatform}
+      />
     </Head>
   );
 }

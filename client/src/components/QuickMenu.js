@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import StatusList from "./StatusList";
 
 export default function QuickMenu(props) {
   if (props.direction === "upload") {
@@ -7,17 +8,19 @@ export default function QuickMenu(props) {
       <QuickBox>
         <IndicatorBox color={props.color} />
         <h3>Select Source</h3>
-        <div>Gallery</div>
-        <div>Camera</div>
+        <input type="file" />
       </QuickBox>
     );
   } else if (props.direction === "lfg") {
     return (
       <QuickBox>
         <IndicatorBox color={props.color} />
-        <h3>Set Status</h3>
-        <div>Gallery</div>
-        <div>Camera</div>
+        <h3>Select Status</h3>
+        <StatusList
+          activePlatform={props.activePlatform}
+          onChangeActivePlatform={props.onChangeActivePlatform}
+          platforms={props.platforms}
+        />
       </QuickBox>
     );
   } else {
