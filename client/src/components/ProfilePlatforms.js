@@ -1,19 +1,7 @@
-import { useState, useEffect } from "react";
 import styled from "styled-components";
 import TextBox from "./TextBox";
-import getPlatformList from "../services/getPlatformList";
 
-export default function ProfilePlatforms() {
-  const [platforms, setPlatforms] = useState([]);
-
-  useEffect(() => {
-    async function doGet() {
-      const platforms = await getPlatformList();
-      setPlatforms(platforms);
-    }
-    doGet();
-  }, []);
-
+export default function ProfilePlatforms({ platforms }) {
   return (
     <>
       <h3>Platforms / Clients</h3>

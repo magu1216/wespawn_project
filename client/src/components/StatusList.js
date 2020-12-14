@@ -1,25 +1,17 @@
-import { useState, useEffect } from "react";
 import styled from "styled-components";
-import getPlatformList from "../services/getPlatformList.js";
 import IndicatorDot from "./IndicatorDot.js";
 
-export default function StatusList({ activePlatform, onChangeActivePlatform }) {
-  const [platforms, setPlatforms] = useState([]);
-
-  useEffect(() => {
-    async function doGet() {
-      const platforms = await getPlatformList();
-      setPlatforms(platforms);
-    }
-    doGet();
-  }, []);
-
+export default function StatusList({
+  activePlatform,
+  onChangeActivePlatform,
+  platforms,
+}) {
   function switchStatus(status) {
     onChangeActivePlatform(status);
   }
 
   return (
-    <>
+    <StatusContainer>
       {/* platforms.length = Sicherheitsabfrage um kein leeres array zu mappen */}
       {platforms.length > 0 &&
         platforms.map((status) => (
@@ -36,7 +28,7 @@ export default function StatusList({ activePlatform, onChangeActivePlatform }) {
             {status.name} {status.version}
           </StatusBox>
         ))}
-    </>
+    </StatusContainer>
   );
 }
 
@@ -52,4 +44,12 @@ const StatusBox = styled.div`
     props.isActive ? `1px 1px 2px ${props.color}` : null};
   border: ${(props) =>
     props.isActive ? `1px solid ${props.color}` : undefined};
+`;
+
+const StatusContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
 `;

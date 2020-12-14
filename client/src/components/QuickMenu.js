@@ -8,8 +8,7 @@ export default function QuickMenu(props) {
       <QuickBox>
         <IndicatorBox color={props.color} />
         <h3>Select Source</h3>
-        <div>Gallery</div>
-        <div>Camera</div>
+        <input type="file" />
       </QuickBox>
     );
   } else if (props.direction === "lfg") {
@@ -20,6 +19,7 @@ export default function QuickMenu(props) {
         <StatusList
           activePlatform={props.activePlatform}
           onChangeActivePlatform={props.onChangeActivePlatform}
+          platforms={props.platforms}
         />
       </QuickBox>
     );

@@ -14,7 +14,11 @@ export default function ProfileHead({ activePlatform }) {
       <TextBox color="var(--primary-gray)" text="Bud Spencer" />
       <TextBox
         color={activePlatform.color}
-        text={activePlatform.name + " " + activePlatform.version}
+        text={
+          activePlatform.name
+            ? activePlatform.name + " " + activePlatform.version
+            : "offline"
+        }
         activePlatform={activePlatform}
       />
     </Head>
