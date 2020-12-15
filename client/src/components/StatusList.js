@@ -22,7 +22,7 @@ export default function StatusList({
             isActive={status.id === activePlatform.id}
           >
             <IndicatorDot
-              color={status.color}
+              color={status.id === activePlatform.id ? status.color : "white"}
               isActive={status.id === activePlatform.id}
             />
             {status.name} {status.version}
