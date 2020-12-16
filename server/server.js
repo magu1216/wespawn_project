@@ -1,6 +1,7 @@
 import express from "express";
 import path from "path";
 import cors from "cors";
+import { dirname } from "./helpers.js";
 import dotenv from "dotenv";
 import connectDB from "./Services/connectAtlas.js";
 import Platform from "./Models/Platform.js";
@@ -13,6 +14,7 @@ const server = express();
 dotenv.config();
 server.use(express.json());
 server.use(cors());
+const __dirname = dirname(import.meta.url);
 
 const port = process.env.PORT || 4000;
 server.listen(port, () => {

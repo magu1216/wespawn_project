@@ -1,9 +1,7 @@
 import axios from "axios";
 
 async function getPlatformList() {
-  const response = await axios.get(
-    "https://frozen-gorge-61178.herokuapp.com/platforms"
-  );
+  const response = await axios.get("http://localhost:4000/platforms");
   const platforms = response.data;
   return platforms;
 }
