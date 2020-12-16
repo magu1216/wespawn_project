@@ -9,11 +9,11 @@ connectDB();
 
 //-------------running the server-----------------
 const server = express();
-
+dotenv.config();
 server.use(express.json());
 server.use(cors());
 
-const port = 4000;
+const port = process.env.PORT || 4000;
 server.listen(port, () => {
   console.log(`server is open at: http://localhost:${port}`);
 });
