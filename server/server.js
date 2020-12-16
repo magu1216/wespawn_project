@@ -1,4 +1,5 @@
 import express from "express";
+import path from "path";
 import cors from "cors";
 import dotenv from "dotenv";
 import connectDB from "./Services/connectAtlas.js";
@@ -18,8 +19,13 @@ server.listen(port, () => {
   console.log(`server is open at: http://localhost:${port}`);
 });
 
-//-----------ROUTES-------------
+server.use(express.static(path.join(__dirname, "../client/build")));
+
 server.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
+});
+//-----------ROUTES-------------
+server.get("/api", (req, res) => {
   res.json({
     status: "Welcome",
   });
