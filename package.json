@@ -9,7 +9,7 @@
     "postinstall": "cd client && npm install && cd ../server && npm install",
     "server": "cd server && npm run start",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run server"
+    "start": "npm run server && npm run client"
   },
 
   "engines": {
