@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import StatusList from "./StatusList";
+import UploadMenu from "./UploadMenu";
 
 export default function QuickMenu(props) {
   if (props.direction === "upload") {
@@ -8,7 +9,7 @@ export default function QuickMenu(props) {
       <QuickBox>
         <IndicatorBox color={props.color} />
         <h3>Select Source</h3>
-        <input type="file" />
+        <UploadMenu />
       </QuickBox>
     );
   } else if (props.direction === "lfg") {

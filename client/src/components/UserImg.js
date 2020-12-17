@@ -15,6 +15,7 @@ export default function UserImg(props) {
           position="absolute"
           top="4px"
           left="4px"
+          activePlatform={props.activePlatform}
         />
       </Avatar>
     </>
