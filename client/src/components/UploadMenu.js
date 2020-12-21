@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-import cors from "cors";
 import styled from "styled-components";
 import Button from "./Button.js";
 
@@ -14,18 +13,24 @@ export default function UploadMenu() {
   function fileUploadHandler() {
     const fd = new FormData();
     fd.append("image", selectedFile, selectedFile.name);
-    axios
-      .post("https://frozen-gorge-61178.herokuapp.com/uploads", fd)
-      .then((res) => {
-        console.log(res);
-      });
+    axios.post(`http://localhost:4000/platforms`, fd).then((res) => {
+      console.log(res);
+    });
   }
 
   return (
-    <UploadWrapper>
-      <input type="file" name="uploadfile" onChange={fileSelectedHandler} />
-      <Button text="Upload" onClick={fileUploadHandler} />
-    </UploadWrapper>
+    // <UploadWrapper>
+    //   <input type="file" name="uploadfile" onChange={fileSelectedHandler} />
+    //   <Button text="Upload" onClick={fileUploadHandler} />
+    // </UploadWrapper>
+    <form
+      action="http://localhost:4000/picture"
+      method="POST"
+      encType="multipart/form-data"
+    >
+      <input name="fileToUpload" type="file" />
+      <button type="submit">Go!</button>
+    </form>
   );
 }
 

@@ -13,6 +13,7 @@ export default function AppHeader() {
 }
 
 const Header = styled.header`
+  z-index: 1;
   background-color: var(--primary-gray);
   display: flex;
   justify-content: space-between;
