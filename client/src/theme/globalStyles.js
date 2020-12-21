@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
+        margin-bottom: 85px;
         background-color: #404040;
         font-family: 'Roboto', sans-serif;
     }

@@ -10,10 +10,11 @@ export default function UploadMenu() {
     setSelectedFile(event.target.files[0]);
   }
 
-  function fileUploadHandler() {
+  function fileUploadHandler(event) {
+    event.preventDefault();
     const fd = new FormData();
     fd.append("image", selectedFile, selectedFile.name);
-    axios.post(`http://localhost:4000/platforms`, fd).then((res) => {
+    axios.post(`http://localhost:4000/picture`, fd).then((res) => {
       console.log(res);
     });
   }
@@ -23,12 +24,8 @@ export default function UploadMenu() {
     //   <input type="file" name="uploadfile" onChange={fileSelectedHandler} />
     //   <Button text="Upload" onClick={fileUploadHandler} />
     // </UploadWrapper>
-    <form
-      action="http://localhost:4000/picture"
-      method="POST"
-      encType="multipart/form-data"
-    >
-      <input name="fileToUpload" type="file" />
+    <form onSubmit={fileUploadHandler}>
+      <input name="image" type="file" onChange={fileSelectedHandler} />
       <button type="submit">Go!</button>
     </form>
   );

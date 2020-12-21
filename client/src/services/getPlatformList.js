@@ -8,4 +8,9 @@ async function getPlatformList() {
   return platforms;
 }
 
+export async function getPictures() {
+  const response = await axios.get("http://localhost:4000/picture");
+  return response.data;
+}
+
 export default getPlatformList;

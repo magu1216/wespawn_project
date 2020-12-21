@@ -10,8 +10,9 @@ export default function Button(props) {
 }
 
 const SquareButton = styled.button`
+  color: ${(props) => props.color};
   width: 100px;
-  height: 50px;
+  height: 30px;
   margin: 5px;
   border-radius: 5px;
 `;

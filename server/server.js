@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import multer from "multer";
 import connectDB from "./Services/connectAtlas.js";
 import Platform from "./Models/Platform.js";
+import fs from "fs";
 
 //---------------running the database-----------------
 connectDB();
@@ -38,6 +39,7 @@ server.listen(port, () => {
 });
 
 server.use(express.static(path.join(__dirname, "../client/build")));
+server.use("/images", express.static(path.join(__dirname, "./images")));
 
 server.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build", "index.html"));
@@ -57,12 +59,15 @@ server.get("/platforms", (req, res) => {
 });
 
 server.get("/picture", (req, res) => {
-  res.json({
-    status: "Uploads",
+  const imagesFolder = path.join(__dirname, "./images");
+  fs.readdir(imagesFolder, (error, files) => {
+    if (error) res.json({ error: "Could not find any files" });
+
+    res.json(files);
   });
 });
 
-server.post("/picture", upload.single("myImage"), (req, res) => {
+server.post("/picture", upload.single("image"), (req, res) => {
   console.log(req.file);
   res.send("File upload success");
 });
