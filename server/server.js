@@ -5,6 +5,7 @@ import { dirname } from "./helpers.js";
 import dotenv from "dotenv";
 import connectDB from "./Services/connectAtlas.js";
 import Platform from "./Models/Platform.js";
+import multer from "multer";
 
 //---------------running the database-----------------
 connectDB();
@@ -26,6 +27,7 @@ server.use(express.static(path.join(__dirname, "../client/build")));
 server.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 });
+
 //-----------ROUTES-------------
 server.get("/api", (req, res) => {
   res.json({
