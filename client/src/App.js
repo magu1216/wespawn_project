@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import getPlatformList from "./services/getPlatformList";
-
 import GlobalStyle from "./theme/globalStyles.js";
 import AppHeader from "./components/AppHeader";
 import AppFooter from "./components/AppFooter";

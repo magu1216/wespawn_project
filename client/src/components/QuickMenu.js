@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import StatusList from "./StatusList";
 import UploadMenu from "./UploadMenu";
@@ -54,4 +54,6 @@ const IndicatorBox = styled.div`
   width: 40vw;
   height: 10px;
   margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
 `;
