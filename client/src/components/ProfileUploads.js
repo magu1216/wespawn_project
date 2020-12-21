@@ -1,44 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { getPictures } from "../services/getPlatformList";
 
 export default function ProfilePlatforms() {
+  const [pictures, setPictures] = useState([]);
+
+  const loadPictures = async () => setPictures(await getPictures());
+
+  useEffect(() => loadPictures(), []);
+
   return (
     <>
       <h3>Uploads</h3>
       <Uploads>
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png"
-          alt=""
-        />
-
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png"
-          alt=""
-        />
-
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png"
-          alt=""
-        />
-
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png"
-          alt=""
-        />
-
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png"
-          alt=""
-        />
-
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png"
-          alt=""
-        />
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png"
-          alt=""
-        />
+        {pictures.map((pic) => (
+          <img src={`http://localhost:4000/images/${pic}`} alt="" />
+        ))}
       </Uploads>
     </>
   );
