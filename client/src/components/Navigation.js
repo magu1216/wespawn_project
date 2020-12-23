@@ -28,7 +28,7 @@ export default function Navigation() {
             checked={state.checkedA}
             onChange={handleChange}
             name="checkedA"
-            inputProps={{ "aria-label": "secondary checkbox" }}
+            inputProps={{ "aria-label": "primary checkbox" }}
           />
           <Button text="Settings" color></Button>
           <Button text="Logout" color></Button>
@@ -39,16 +39,12 @@ export default function Navigation() {
 }
 
 const StyledNavigation = styled.nav`
-  background-color: crimson;
+  background-color: darkgray;
   display: flex;
   justify-content: center;
-  height: 30vh;
-  width: 50vw;
+  height: 6vh;
+  width: 100vw;
   position: absolute;
   top: 60px;
   right: 0;
-
-  ul {
-    list-style-type: none;
-  }
 `;

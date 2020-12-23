@@ -11,14 +11,10 @@ export default function ProfileHead({ activePlatform }) {
         gridRow="1 / 3"
         gridColumn="1 / 2"
       />
-      <TextBox color="var(--primary-gray)" text="Bud Spencer" />
+      <TextBox text="Bud Spencer" />
       <TextBox
         color={activePlatform.color}
-        text={
-          activePlatform.name
-            ? activePlatform.name + " " + activePlatform.version
-            : "offline"
-        }
+        text={activePlatform.name ? "online" : "offline"}
         activePlatform={activePlatform}
       />
     </Head>
@@ -27,10 +23,10 @@ export default function ProfileHead({ activePlatform }) {
 
 const Head = styled.section`
   display: grid;
-  padding: 65px 10px 10px 10px;
+  padding: 80px 10px 10px 10px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  grid-gap: 10px;
+  grid-gap: 0px;
   justify-items: center;
   align-items: center;
 `;

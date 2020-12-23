@@ -17,11 +17,10 @@ const StyledBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3px 5px;
+  height: 40px;
+  padding: 10px 25px;
   font-size: 20px;
-  border-radius: 10px;
+  background: ${(props) => props.color};
   border: 1px solid ${(props) => props.bordercolor};
-
-  background-color: ${(props) => props.color || "var(--primary-gray)"};
-  box-shadow: inset 0 0 4px ${(props) => props.bordercolor};
+  border-radius: 25px;
 `;

@@ -55,6 +55,6 @@ const Button = styled.div`
     height: 35px;
     width: 35px;
     color: ${(props) =>
-      props.isActive ? props.color : "var(--inactivebutton-gray)"};
+      props.isActive ? "purple" : "var(--inactivebutton-gray)"};
   }
 `;

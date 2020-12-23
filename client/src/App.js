@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import getPlatformList from "./services/getPlatformList";
+import getPlatformList, { getPictures } from "./services/getPlatformList";
 import GlobalStyle from "./theme/globalStyles.js";
 import AppHeader from "./components/AppHeader";
 import AppFooter from "./components/AppFooter";
@@ -10,6 +10,7 @@ import ProfileUploads from "./components/ProfileUploads.js";
 function App() {
   const [platforms, setPlatforms] = useState([]);
   const [activePlatform, setActivePlatform] = useState({});
+  const [pictures, setPictures] = useState([]);
 
   useEffect(() => {
     async function doGet() {
@@ -19,13 +20,17 @@ function App() {
     doGet();
   }, []);
 
+  const loadPictures = async () => setPictures(await getPictures());
+
+  useEffect(() => loadPictures(), [pictures]);
+
   return (
     <div className="App">
       <GlobalStyle />
       <AppHeader />
       <ProfileHead activePlatform={activePlatform} />
       <ProfilePlatforms platforms={platforms} />
-      <ProfileUploads />
+      <ProfileUploads pictures={pictures} />
       <AppFooter
         activePlatform={activePlatform}
         onChangeActivePlatform={setActivePlatform}

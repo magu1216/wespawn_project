@@ -32,7 +32,7 @@ export default function AppFooter({
 
   return (
     <Footer>
-      {uploadMenu && <QuickMenu direction="upload" color="var(--upload-red)" />}
+      {uploadMenu && <QuickMenu direction="upload" color="purple" />}
       <QuickButton
         color="var(--upload-red)"
         direction="upload"
@@ -42,7 +42,7 @@ export default function AppFooter({
       {lfgMenu && (
         <QuickMenu
           direction="lfg"
-          color="var(--lfg-cyan)"
+          color="purple"
           activePlatform={activePlatform}
           onChangeActivePlatform={onChangeActivePlatform}
           platforms={platforms}
@@ -54,9 +54,7 @@ export default function AppFooter({
         onClick={toggleLfgMenu}
         isActive={lfgMenu}
       />
-      {friendsMenu && (
-        <QuickMenu direction="friends" color="var(--friendlist-blue)" />
-      )}
+      {friendsMenu && <QuickMenu direction="friends" color="purple" />}
       <QuickButton
         color="var(--friendlist-blue)"
         direction="friends"
@@ -68,7 +66,7 @@ export default function AppFooter({
 }
 
 const Footer = styled.footer`
-  background-color: var(--primary-gray);
+  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
