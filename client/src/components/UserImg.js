@@ -23,6 +23,7 @@ export default function UserImg(props) {
 }
 
 const Avatar = styled.div`
+  z-index: -1;
   position: relative;
   grid-column: ${(props) => props.gridColumn};
   grid-row: ${(props) => props.gridRow};

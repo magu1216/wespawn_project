@@ -33,6 +33,7 @@ export default function StatusList({
 }
 
 const StatusBox = styled.div`
+  color: black;
   display: flex;
   padding: 10px 15px;
   margin: 10px;

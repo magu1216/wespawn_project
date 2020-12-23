@@ -1,32 +1,39 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import { getPictures } from "../services/getPlatformList";
 
-export default function ProfilePlatforms() {
-  const [pictures, setPictures] = useState([]);
-
-  const loadPictures = async () => setPictures(await getPictures());
-
-  useEffect(() => loadPictures(), []);
-
+export default function ProfilePlatforms({ pictures }) {
   return (
-    <>
-      <h3>Uploads</h3>
+    <SectionWrapper>
+      <h3>My Snapshots</h3>
       <Uploads>
-        {pictures.map((pic) => (
-          <img src={`http://localhost:4000/images/${pic}`} alt="" />
-        ))}
+        {pictures
+          .slice(0)
+          .reverse()
+          .map((pic) => (
+            <img src={`http://localhost:4000/images/${pic}`} alt="" />
+          ))}
       </Uploads>
-    </>
+    </SectionWrapper>
   );
 }
 
-const Uploads = styled.section`
+const SectionWrapper = styled.section`
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 85px;
+  h3 {
+    padding: 5px;
+  }
+`;
+
+const Uploads = styled.div`
   display: flex;
   flex-wrap: wrap;
+  padding: 10px;
   gap: 20px;
   justify-content: center;
   align-items: center;
+  border-top: 0.5px solid white;
 
   img {
     width: 150px;

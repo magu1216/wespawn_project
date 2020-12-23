@@ -38,7 +38,8 @@ export default function QuickMenu(props) {
 
 const QuickBox = styled.div`
   z-index: -1;
-  background-color: #f2f2f2;
+  background-color: white;
+  color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,6 +48,10 @@ const QuickBox = styled.div`
   position: absolute;
   bottom: 35px;
   border-radius: 35px 35px 0 0;
+
+  h3 {
+    color: black;
+  }
 `;
 
 const IndicatorBox = styled.div`

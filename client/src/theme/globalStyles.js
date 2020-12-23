@@ -12,16 +12,26 @@ const GlobalStyle = createGlobalStyle`
         --upload-red: #F20039;
         --lfg-cyan: #1BB5AB;
         --friendlist-blue: #446DFD;
-        --primary-gray: #f2f2f2;
+        --primary-gray: white;
         --secondary-gray: #404040;
         --inactivebutton-gray: #8C8C8C;
         --shadow-gray: lightgrey;
     }
 
     body {
-        margin-bottom: 85px;
-        background-color: #404040;
+        /* margin-bottom: 85px; */
         font-family: 'Roboto', sans-serif;
+        min-height: 100vh;
+        height: 100%;
+        background: rgb(94,0,158);
+        background: linear-gradient(0deg, rgba(42,42,42,1) 0%, rgba(0,0,0,1) 65%); 
+    }
+
+    h1,
+    h2,
+    h3,
+    div {
+        color: white;
     }
 
 `;
