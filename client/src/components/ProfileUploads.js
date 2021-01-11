@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function ProfilePlatforms({ pictures }) {
+export default function ProfileUploads({ pictures }) {
   return (
     <SectionWrapper>
       <h3>My Snapshots</h3>
       <Uploads>
-        {pictures
+      {pictures
           .slice(0)
           .reverse()
           .map((pic) => (
-            <img src={`http://localhost:4000/images/${pic}`} alt="" />
+            <img src={`http://localhost:4000/picture/${pic}`} alt="" />
           ))}
       </Uploads>
     </SectionWrapper>

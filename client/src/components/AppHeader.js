@@ -6,7 +6,7 @@ export default function AppHeader() {
   return (
     <Header>
       <h1>
-        <span style={{ color: "purple" }}>we</span>SPAWN
+        <span style={{ color: "yellow" }}>we</span>SPAWN
       </h1>
       <Navigation />
     </Header>

@@ -18,6 +18,7 @@
   "author": "Markus Guertner",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "nodemon": "^2.0.6",
     "react-hot-toast": "^1.0.0"
